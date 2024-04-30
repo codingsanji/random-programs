@@ -30,8 +30,6 @@ public class MaxMin {
 	        }
 	    }
 	   
-
-	    // Assign the largest and second largest elements to answerArr
 	    answerArr[0] = samplearr[maxIndex];
 	    answerArr[1] = samplearr[secondMaxIndex];
 
