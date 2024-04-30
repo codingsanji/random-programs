@@ -13,23 +13,28 @@ public class MaxMin {
 	    int[] samplearr = roughArr(arr);
 	    int[] answerArr = new int[2];
 	    int n = samplearr.length;
+
 	    // Initialize variables to store the indices of largest and second largest elements
 	    int maxIndex = 0;
 	    int secondMaxIndex = 0; 
 
 	    // Find the index of the largest element
-	    for (int i = 0; i < n; i++) {
+	    for (int i = 1; i < n; i++) {  
 	        if (samplearr[i] > samplearr[maxIndex]) {
 	            maxIndex = i;
 	        }
 	    }
+
 	    // Find the index of the second largest element
 	    for (int i = 0; i < n; i++) {
-	        if (i != maxIndex && (samplearr[i] > samplearr[secondMaxIndex])) {
-	        	secondMaxIndex = i;
+	        if (i != maxIndex) {
+	            if (secondMaxIndex == 0 || samplearr[i] > samplearr[secondMaxIndex]) {
+	                secondMaxIndex = i;
+	            }
 	        }
 	    }
-	   
+
+	    // Assign the largest and second largest elements to answerArr
 	    answerArr[0] = samplearr[maxIndex];
 	    answerArr[1] = samplearr[secondMaxIndex];
 
@@ -50,7 +55,7 @@ public class MaxMin {
 	}
 
 	public void arrDemo() {
-		 int[] myArr= {5 , 9 , 3 , 15 , 8 , 2};
+		 int[] myArr= {15 , 9 , 3 , 5 , 8 , 2};
 		 
 		 int[] maxxy= arrMax(myArr);
 		 System.out.print("Largest Element: ");
