@@ -15,6 +15,15 @@ public class LinkyListy1 {
 		}
 	}
 	
+	public void printing() {
+		ListNode current = head;
+		while (current!=null) {
+			System.out.print(current.data + " -> ");
+			current=current.next;
+		}
+		System.out.print("null");
+	}
+	
 	public static void main(String[] args) {
 		LinkyListy1 linky = new LinkyListy1();
 		linky.head=new ListNode(10);
@@ -26,5 +35,7 @@ public class LinkyListy1 {
 		linky.head.next=second;  //10->20
 		second.next=third;       //10->20->30
 		third.next=fourth;       //10->20->30->40->null
+		
+		linky.printing();
 	}
 }
