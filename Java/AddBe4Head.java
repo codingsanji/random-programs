@@ -35,7 +35,7 @@ public class AddBe4Head {
 		
 		//ask user what they want to add and add to the beginning
 		Scanner scanner=new Scanner(System.in);
-		System.out.print("What value do you want to replace as your first value? : " );
+		System.out.print("What value do you want to add as your first value? : " );
 		int newnode = scanner.nextInt();
 		ListNode firstNode = new ListNode(newnode);
 		firstNode.next=head;
