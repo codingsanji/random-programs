@@ -33,7 +33,7 @@ public class AddBe4Head {
 		linky.head.next=second;
 		second.next=third;
 		
-		//ask user what they want to add
+		//ask user what they want to add and add to the beginning
 		Scanner scanner=new Scanner(System.in);
 		System.out.print("What value do you want to replace as your first value? : " );
 		int newnode = scanner.nextInt();
