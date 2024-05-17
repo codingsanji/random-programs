@@ -10,8 +10,8 @@ public class BinarySearch {
 			if (arr[mid]>target) {
 				max=mid-1;
 			} else if(arr[mid]<target) {
-				max=mid+1;
-			} else if (arr[min]==target) {
+				min=mid+1;
+			} else {
 				return mid;
 			}
 		}
@@ -27,7 +27,7 @@ public class BinarySearch {
 		scanner.nextLine();
 		int[] yourarr = new int[count];
 		for (int i=0 ; i<count ; i++) {
-			System.out.println("Value "+ (i+1) + ": ");
+			System.out.print("Value "+ (i+1) + ": ");
 			int value=scanner.nextInt();
 			yourarr[i]=value;
 		}
