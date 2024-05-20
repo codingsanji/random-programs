@@ -37,6 +37,7 @@ public class BinarySearch {
 		System.out.print("Your target value: ");
 		int target=scanner.nextInt();
 		
+		Arrays.sort(yourarr);
 		int index=binarySearch(yourarr , target);
 		if (index!=-1) {
 			System.out.println("The index of "+ target + " is "+ index + ".");
