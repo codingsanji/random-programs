@@ -38,9 +38,11 @@ public class BinarySearch {
 		int target=scanner.nextInt();
 		
 		Arrays.sort(yourarr);
+		System.out.print("Here is your sorted array: ");
+		System.out.println(Arrays.toString(yourarr));
 		int index=binarySearch(yourarr , target);
 		if (index!=-1) {
-			System.out.println("The index of "+ target + " is "+ index + ".");
+			System.out.println("The index of "+ target + " is hence "+ index + ".");
 		} else {
 			System.out.println("Your target isn't there in your inputted array.");
 		}
