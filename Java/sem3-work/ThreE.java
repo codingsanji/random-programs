@@ -12,17 +12,23 @@ public class ThreE {
         return count;
     }
     
+    public static Boolean result(int count) {
+    	if (count >= 1 && count <= 3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your word: ");
         String word = scanner.nextLine();
         
         int count = check(word);
+        Boolean answer=result(count);
+        System.out.println(answer);
         
-        if (count >= 1 && count <= 3) {
-            System.out.print(true);
-        } else {
-            System.out.print(false);
-        }
+        
     }
 }
