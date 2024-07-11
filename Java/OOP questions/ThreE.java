@@ -29,6 +29,6 @@ public class ThreE {
         Boolean answer=result(count);
         System.out.println(answer);
         
-        
+        scanner.close(); 
     }
 }
