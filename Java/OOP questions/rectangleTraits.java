@@ -1,5 +1,5 @@
 package Java;
-import java.util.Scanner;
+import java.util.*;
 
 class Rectangle {
     double width;
