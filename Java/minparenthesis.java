@@ -9,6 +9,7 @@ public class minparenthesis {
         
         int result = minAddToMakeValid(input);
         System.out.println("Min moves required to make the string valid: " + result);
+        scanner.close();
     }
     
     public static int minAddToMakeValid(String s) {
@@ -29,4 +30,6 @@ public class minparenthesis {
 
         return opening + closing; 
     }
+    
+    
 }

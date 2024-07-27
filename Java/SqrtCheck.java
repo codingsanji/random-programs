@@ -15,6 +15,7 @@ public class SqrtCheck {
         } else {
             System.out.println(0);
         }
+        scanner.close();
     }
 }
 
