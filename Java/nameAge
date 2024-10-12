@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class nameAge {
+
+    static String expand(String template, HashMap<String, Object> vars) {
+        for (Map.Entry<String, Object> entry : vars.entrySet()) {
+            String t = "\\{" + entry.getKey() + "\\}";
+            template = template.replaceAll(t, entry.getValue().toString());
+        }
+        return template;
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        HashMap<String, Object> vars = new HashMap<>();
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        vars.put("name", name);
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+        vars.put("age", age);
+
+        System.out.println(expand("<b>Hello {name}. You are {age} years old.</b>", vars));
+
+        scanner.close(); 
+    }
+
+}
